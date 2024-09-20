@@ -56,6 +56,8 @@ public:
     std::string customIconForDesktop() const {
         if (isKDE()) {
             return "input-keyboard";
+        } else if (isUKUI()) {
+            return "ukui-english-en-symbolic";
         } else {
             return "input-keyboard-symbolic";
         }
