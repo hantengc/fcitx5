@@ -51,7 +51,7 @@ public:
             deltaAcc_ += 120;
         }
     }
-    void activate(int, int) { parent_->instance()->toggle(); }
+    void activate(int, int) {}
     void secondaryActivate(int, int) {}
     std::string iconName() {
         static bool preferSymbolic = !isKDE();
@@ -214,7 +214,7 @@ public:
     FCITX_OBJECT_VTABLE_PROPERTY(tooltip, "ToolTip", "(sa(iiay)ss)",
                                  []() { return tooltip(); });
     FCITX_OBJECT_VTABLE_PROPERTY(itemIsMenu, "ItemIsMenu", "b",
-                                 []() { return false; });
+                                 []() { return true; });
     FCITX_OBJECT_VTABLE_PROPERTY(menu, "Menu", "o",
                                  []() { return dbus::ObjectPath("/MenuBar"); });
     FCITX_OBJECT_VTABLE_PROPERTY(iconThemePath, "IconThemePath", "s",
